@@ -4,6 +4,7 @@ import toast from 'react-hot-toast'
 import Markdown from 'react-markdown'
 import { useAuth } from "@clerk/clerk-react";
 import axios from 'axios'
+
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 
@@ -21,9 +22,9 @@ const BlogTitles = () => {
 
   const [selectedCategory, setSelectedCategory] = useState("General");
   const [input, setInput] = useState("");
-   const [loading, setLoading] = useState(false);
-   const [content, setContent] = useState("");
-   const {getToken}= useAuth();
+  const [loading, setLoading] = useState(false);
+  const [content, setContent] = useState("");
+  const {getToken}= useAuth();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
