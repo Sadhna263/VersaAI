@@ -12,7 +12,7 @@ import ReviewResume from './pages/ReviewResume';
 import Community from './pages/Community';
 import { useEffect } from 'react';
 import { useAuth } from '@clerk/clerk-react';
-
+import { Toaster } from 'react-hot-toast';
 
 
 const App = () => {
@@ -25,6 +25,7 @@ const App = () => {
 
   return (
     <div>
+      <Toaster />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/ai' element={<Layout />}>
